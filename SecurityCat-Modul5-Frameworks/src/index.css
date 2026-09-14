@@ -1,0 +1,36 @@
+:root {
+  --bg: #0f131d; --surface: #1c1f2a; --surface2: #262a35;
+  --cyan: #00f0ff; --blue: #89ceff; --green: #6ffbbe;
+  --text: #e8ecf4; --muted: #9aa3b5; --danger: #ff7a90;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font-family: Inter, system-ui, sans-serif; }
+code, .xp, td:first-child { font-family: 'JetBrains Mono', monospace; }
+.page { max-width: 960px; margin: 0 auto; padding: 24px; }
+.hero h1 { margin: 4px 0 8px; } .hero h1 span { color: var(--cyan); }
+.kicker { color: var(--green); font-size: 13px; } .sub, .muted { color: var(--muted); }
+.grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .grid { grid-template-columns: 1fr 1fr; } }
+.card { background: var(--surface); border: 1px solid var(--surface2);
+  border-radius: 12px; padding: 16px; }
+.card h2 small { color: var(--blue); font-weight: 400; }
+.stat { color: var(--green); font-size: 14px; }
+.form { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.input { flex: 1; min-width: 180px; background: var(--surface2); color: var(--text);
+  border: 1px solid transparent; border-radius: 8px; padding: 8px 10px; }
+.input.err { border-color: var(--danger); }
+.err-text { color: var(--danger); font-size: 13px; }
+.btn { background: var(--surface2); color: var(--text); border: 0;
+  border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+.btn.on, .btn.primary { background: var(--cyan); color: #06232a; font-weight: 600; }
+.filters { display: flex; gap: 8px; margin-bottom: 8px; }
+.tasks { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.task { display: flex; justify-content: space-between; background: var(--surface2);
+  border-radius: 8px; padding: 8px 10px; }
+.task.done label { text-decoration: line-through; color: var(--muted); }
+.xp { color: var(--green); font-size: 12px; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tbl th, .tbl td { text-align: left; padding: 8px; border-bottom: 1px solid var(--surface2); }
+.tbl th { color: var(--blue); }
+.foot { color: var(--muted); font-size: 12px; margin-top: 16px; }

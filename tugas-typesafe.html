@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type-Safe Demo — Security Cat (Modul 3-4)</title>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<style>body{font-family:'Inter',system-ui,sans-serif;background:#0f131d;color:#dfe2f1}</style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="bg-[#0a0e18] border-b border-[#262a35]"><div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-[#00f0ff] text-[#00363a] flex items-center justify-center font-bold">SC</div>
+<div><h1 class="font-bold">Modul 3-4: Strict TS + Zod + CVA</h1><p class="text-xs text-[#b9cacb]">tsconfig strict · branded types · discriminated unions · Zod</p></div></div>
+<nav aria-label="Navigasi Utama"><ul class="flex gap-4 text-sm"><li><a href="tugas-dashboard.html" class="text-[#b9cacb]">Dashboard</a></li><li><a href="tugas-form.html" class="text-[#b9cacb]">Form</a></li><li><a href="tugas-list.html" class="text-[#b9cacb]">List</a></li><li><a href="tugas-typesafe.html" class="text-[#00f0ff]" aria-current="page">Type-Safe</a></li></ul></nav>
+</div></header>
+<main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-6" role="main">
+<section class="rounded-xl border border-[#262a35] bg-[#1c1f2a] p-6" aria-labelledby="f34"><h2 id="f34" class="font-bold border-b border-[#262a35] pb-2 mb-4">Form tervalidasi Zod (CreateTaskSchema)</h2>
+<form id="taskForm34" class="space-y-3" novalidate>
+<div><label for="in-title" class="text-sm">Judul (min 3)</label><input id="in-title" name="title" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm" placeholder="Modul Phishing Beginner"></div>
+<div><label for="in-course" class="text-sm">Mata kuliah (min 2)</label><input id="in-course" name="courseName" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm" placeholder="Pemrograman Web"></div>
+<div class="grid grid-cols-2 gap-3"><div><label for="in-prio" class="text-sm">Prioritas</label><select id="in-prio" name="priority" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm"><option>LOW</option><option>MEDIUM</option><option>HIGH</option></select></div>
+<div><label for="in-due" class="text-sm">Tenggat</label><input id="in-due" name="dueDate" type="date" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm"></div></div>
+<button class="h-10 px-4 rounded-lg bg-[#00f0ff] text-[#00363a] text-sm font-semibold">Simpan type-safe</button>
+<p class="text-xs text-[#b9cacb]">Sumber TS: <span class="mono">src/schemas/taskSchema.ts</span> · <span class="mono">src/services/apiService.ts</span> · <span class="mono">src/app.ts</span>. State async: idle/loading/success/error.</p>
+</form></section>
+<section class="rounded-xl border border-[#262a35] bg-[#1c1f2a] p-6" aria-labelledby="l34"><h2 id="l34" class="font-bold border-b border-[#262a35] pb-2 mb-4">Daftar type-safe (FetchTasksState)</h2><div id="taskList34" aria-live="polite"></div></section>
+</main>
+<footer class="bg-[#0a0e18] text-xs text-center py-4 text-[#b9cacb]" role="contentinfo"><p>&copy; 2026 Security Cat — Modul 3-4.</p></footer>
+<script type="module">import "./assets/dist-modul34/app.js";</script>
+</body>
+</html>

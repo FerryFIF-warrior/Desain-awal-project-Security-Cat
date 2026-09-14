@@ -1,0 +1,8 @@
+node_modules/
+SecurityCat-Modul5-Frameworks/dist/
+SecurityCat-Modul6-NextJS/.next/
+SecurityCat-Modul6-NextJS/out/
+SecurityCat-Modul7-State/dist/
+*.log
+.DS_Store
+Thumbs.db

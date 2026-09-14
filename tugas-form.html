@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Input — Security Cat (Modul 1-2)</title>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',system-ui,sans-serif;background:#0f131d;color:#dfe2f1}.mono{font-family:'JetBrains Mono',monospace}</style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+<header class="bg-[#0a0e18] border-b border-[#262a35]" role="banner">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-[#00f0ff] text-[#00363a] flex items-center justify-center font-bold">SC</div>
+      <div><h1 class="font-bold">Form Input Data (FR-03)</h1>
+      <p class="text-xs text-[#b9cacb]">Semantik + ARIA + validasi + CVA + async</p></div>
+    </div>
+    <nav aria-label="Navigasi Utama">
+      <ul class="flex gap-4 text-sm font-medium">
+        <li><a href="tugas-dashboard.html" class="text-[#b9cacb] hover:text-white">Dashboard</a></li>
+        <li><a href="tugas-form.html" class="text-[#00f0ff]" aria-current="page">Form Input</a></li>
+        <li><a href="tugas-list.html" class="text-[#b9cacb] hover:text-white">List / Tabel</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full grid grid-cols-1 md:grid-cols-3 gap-6" role="main">
+  <section class="md:col-span-2 rounded-xl border border-[#262a35] bg-[#1c1f2a] p-6" aria-labelledby="form-heading">
+    <h2 id="form-heading" class="font-bold border-b border-[#262a35] pb-2 mb-4">Tambah Materi / Tugas (FR-03)</h2>
+    <form id="task-form" class="space-y-4" novalidate>
+      <div>
+        <label for="task-title" class="block text-sm font-medium mb-1">Judul <span class="text-[#ffb4ab]">*</span></label>
+        <input id="task-title" name="title" type="text" required aria-required="true" aria-describedby="title-error" placeholder="Contoh: Modul Phishing Beginner" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm focus:outline-none focus:ring-2 focus:ring-[#00f0ff]">
+        <p id="title-error" class="text-xs text-[#ffb4ab] mt-1 hidden" role="alert">Judul wajib diisi, minimal 3 karakter.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="task-category" class="block text-sm font-medium mb-1">Kategori</label>
+          <select id="task-category" name="category" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm">
+            <option>Pemrograman Web</option><option>Rekayasa Perangkat Lunak</option><option>Basis Data</option>
+          </select>
+        </div>
+        <div>
+          <label for="task-priority" class="block text-sm font-medium mb-1">Prioritas</label>
+          <select id="task-priority" name="priority" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm">
+            <option>Tinggi</option><option selected>Sedang</option><option>Rendah</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="task-difficulty" class="block text-sm font-medium mb-1">Difficulty (FR-14)</label>
+          <select id="task-difficulty" name="difficulty" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm">
+            <option>Beginner</option><option>Intermediate</option><option>Advanced</option>
+          </select>
+        </div>
+        <div>
+          <label for="task-date" class="block text-sm font-medium mb-1">Tenggat</label>
+          <input id="task-date" name="dueDate" type="date" class="w-full px-3 py-2 rounded-lg bg-[#0a0e18] border border-[#3b494b] text-sm">
+        </div>
+      </div>
+      <div id="form-feedback" class="hidden p-3 rounded-lg text-sm" role="status" aria-live="polite"></div>
+      <div class="flex gap-2">
+        <button type="submit" id="btn-submit" class="h-10 px-4 rounded-lg bg-[#00f0ff] text-[#00363a] text-sm font-semibold">Simpan</button>
+        <button type="button" id="btn-reset" class="h-10 px-4 rounded-lg border border-[#3b494b] text-sm text-[#b9cacb]">Reset</button>
+      </div>
+    </form>
+  </section>
+  <aside class="rounded-xl border border-[#262a35] bg-[#1c1f2a] p-6" aria-labelledby="cva-heading">
+    <h2 id="cva-heading" class="font-bold border-b border-[#262a35] pb-2 mb-4">Varian CVA</h2>
+    <p class="text-xs text-[#b9cacb] mb-3">Pola ownership: <span class="mono">assets/ui.js → buttonClass / badgeClass</span>. Tanpa install NPM.</p>
+    <div id="cva-demo" class="flex flex-wrap gap-2"></div>
+    <div class="mt-4 text-xs text-[#b9cacb]">Submit sukses → tersimpan di <span class="mono">localStorage sc_tasks_v1</span>, tampil di Dashboard + List.</div>
+  </aside>
+</main>
+<footer class="bg-[#0a0e18] text-[#b9cacb] text-xs py-4 text-center border-t border-[#262a35]" role="contentinfo"><p>&copy; 2026 Security Cat — Modul 1-2.</p></footer>
+<script src="assets/ui.js"></script>
+<script src="assets/tasks-store.js"></script>
+<script>
+(() => {
+  'use strict';
+  const form = document.getElementById('task-form');
+  const title = document.getElementById('task-title');
+  const err = document.getElementById('title-error');
+  const fb = document.getElementById('form-feedback');
+  const demo = document.getElementById('cva-demo');
+  const { buttonClass, showToast, escapeHtml } = window.SecurityCatUI;
+  demo.innerHTML = ['default','secondary','destructive','outline','ghost'].map((v) => `<button type="button" class="${buttonClass({ variant: v, size: 'sm' })}" data-v="${v}">${v}</button>`).join('');
+  demo.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) showToast('Varian CVA: ' + b.dataset.v); });
+  document.getElementById('btn-submit').className = buttonClass({ variant: 'default', size: 'default' }) + ' h-10 px-4 text-sm';
+  function feedback(msg, ok) {
+    fb.textContent = msg;
+    fb.className = 'p-3 rounded-lg text-sm ' + (ok ? 'bg-emerald-500/10 text-[#6ffbbe] border border-emerald-500/30' : 'bg-red-500/10 text-[#ffb4ab] border border-red-500/30');
+    fb.classList.remove('hidden'); setTimeout(() => fb.classList.add('hidden'), 3000);
+  }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = title.value.trim();
+    if (v.length < 3) { err.classList.remove('hidden'); title.classList.add('ring-2','ring-red-500'); title.focus(); return; }
+    err.classList.add('hidden'); title.classList.remove('ring-2','ring-red-500');
+    window.SecurityCatTasks.addTask({ title: v, category: document.getElementById('task-category').value, priority: document.getElementById('task-priority').value });
+    feedback('Data tersimpan: ' + v, true); showToast('Tersimpan. Lihat di Dashboard / List.');
+    form.reset();
+  });
+  document.getElementById('btn-reset').addEventListener('click', () => { form.reset(); err.classList.add('hidden'); });
+})();
+</script>
+</body>
+</html>

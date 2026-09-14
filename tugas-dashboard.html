@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Tugas — Security Cat (Modul 1-2)</title>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',system-ui,sans-serif;background:#0f131d;color:#dfe2f1}.mono{font-family:'JetBrains Mono',monospace}</style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+<header class="bg-[#0a0e18] border-b border-[#262a35]" role="banner">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-[#00f0ff] text-[#00363a] flex items-center justify-center font-bold">SC</div>
+      <div><h1 class="font-bold">Security Cat — Task Dashboard</h1>
+      <p class="text-xs text-[#b9cacb]">Modul 1-2: Semantik + Tailwind v4 + ARIA + Async</p></div>
+    </div>
+    <nav aria-label="Navigasi Utama">
+      <ul class="flex gap-4 text-sm font-medium">
+        <li><a href="tugas-dashboard.html" class="text-[#00f0ff]" aria-current="page">Dashboard</a></li>
+        <li><a href="tugas-form.html" class="text-[#b9cacb] hover:text-white">Form Input</a></li>
+        <li><a href="tugas-list.html" class="text-[#b9cacb] hover:text-white">List / Tabel</a></li>
+        <li><a href="dashboard.html" class="text-[#b9cacb] hover:text-white">Desain Awal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full grid grid-cols-1 md:grid-cols-3 gap-6" role="main">
+  <section class="md:col-span-1 rounded-xl border border-[#262a35] bg-[#1c1f2a] p-6" aria-labelledby="ringkas-heading">
+    <h2 id="ringkas-heading" class="font-bold border-b border-[#262a35] pb-2 mb-4">Ringkasan SRS</h2>
+    <ul class="text-sm space-y-2 text-[#b9cacb]">
+      <li>FR-02 Dashboard: <span id="stat-total" class="text-white font-semibold" aria-live="polite">0 tugas</span></li>
+      <li>FR-03 Materi: <span class="text-white font-semibold">4 modul</span> (Phishing, Brute Force, SQLi, Auth)</li>
+      <li>FR-12 Gamifikasi: <span class="text-white font-semibold">XP + badge</span> per tugas selesai</li>
+      <li>FR-14 Difficulty: <span class="mono text-xs">Beginner / Intermediate / Advanced</span></li>
+    </ul>
+    <div class="flex gap-2 mt-5">
+      <a id="cta-form" href="tugas-form.html" class="inline-flex items-center justify-center rounded-lg bg-[#00f0ff] text-[#00363a] font-semibold text-sm h-10 px-4">Tambah Tugas</a>
+      <a href="tugas-list.html" class="inline-flex items-center justify-center rounded-lg border border-[#00f0ff]/50 text-[#00f0ff] text-sm h-10 px-4">Lihat Tabel</a>
+    </div>
+  </section>
+  <section class="md:col-span-2 rounded-xl border border-[#262a35] bg-[#1c1f2a] p-6" aria-labelledby="daftar-heading">
+    <div class="flex justify-between items-center border-b border-[#262a35] pb-2 mb-4">
+      <h2 id="daftar-heading" class="font-bold">Daftar Tugas Aktif</h2>
+      <div class="flex items-center gap-2">
+        <button id="btn-fetch-mock" class="text-xs bg-[#262a35] hover:bg-[#313540] px-3 py-1.5 rounded-md border border-[#3b494b]">Load Mock API</button>
+        <span id="task-count" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#00f0ff]/10 text-[#00f0ff]" aria-live="polite">0 Tugas</span>
+      </div>
+    </div>
+    <div id="status-feedback" class="hidden p-3 mb-4 rounded-lg text-sm" role="status" aria-live="polite"></div>
+    <div id="task-container" class="space-y-3" aria-label="Daftar kartu tugas"></div>
+  </section>
+</main>
+<footer class="bg-[#0a0e18] text-[#b9cacb] text-xs py-4 text-center border-t border-[#262a35]" role="contentinfo">
+  <p>&copy; 2026 Security Cat — Modul 1-2 Praktikum Front-End, D3 TI SV UNS.</p>
+</footer>
+<script src="assets/ui.js"></script>
+<script src="assets/tasks-store.js"></script>
+<script>
+(() => {
+  'use strict';
+  const c = document.getElementById('task-container');
+  const count = document.getElementById('task-count');
+  const total = document.getElementById('stat-total');
+  const fb = document.getElementById('status-feedback');
+  const btn = document.getElementById('btn-fetch-mock');
+  const { badgeClass, escapeHtml, showToast } = window.SecurityCatUI;
+  const store = window.SecurityCatTasks;
+  function feedback(msg, ok) {
+    fb.textContent = msg;
+    fb.className = 'p-3 mb-4 rounded-lg text-sm ' + (ok ? 'bg-emerald-500/10 text-[#6ffbbe] border border-emerald-500/30' : 'bg-red-500/10 text-[#ffb4ab] border border-red-500/30');
+    fb.classList.remove('hidden');
+    setTimeout(() => fb.classList.add('hidden'), 3000);
+  }
+  function render() {
+    const tasks = store.load();
+    count.textContent = tasks.length + ' Tugas';
+    total.textContent = tasks.length + ' tugas';
+    c.innerHTML = tasks.length ? tasks.map((t) => `
+      <article class="p-4 rounded-xl border border-[#262a35] bg-[#0f131d] flex justify-between items-center gap-3" data-id="${t.id}">
+        <div class="space-y-1 min-w-0">
+          <div class="flex items-center gap-2 flex-wrap">
+            <h3 class="font-semibold text-sm">${escapeHtml(t.title)}</h3>
+            ${badgeClass(t.priority, 'priority')}
+          </div>
+          <p class="text-xs text-[#b9cacb]">Kategori: ${escapeHtml(t.category)} • ${escapeHtml(t.status)} • ${escapeHtml(t.createdAt)}</p>
+        </div>
+        <div class="flex gap-2 shrink-0">
+          <button data-act="toggle" data-id="${t.id}" class="text-xs px-2.5 py-1.5 rounded-md border border-[#3b494b] hover:border-[#00f0ff]" aria-label="Ubah status ${escapeHtml(t.title)}">${t.status === 'Selesai' ? 'Aktifkan' : 'Selesaikan'}</button>
+          <button data-act="del" data-id="${t.id}" class="text-xs text-[#ffb4ab] px-2.5 py-1.5 rounded-md hover:bg-red-500/10" aria-label="Hapus tugas ${escapeHtml(t.title)}">Hapus</button>
+        </div>
+      </article>`).join('') : '<p class="text-center text-[#b9cacb] py-8 text-sm">Belum ada tugas. Tambah via Form Input.</p>';
+  }
+  c.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-act]');
+    if (!b) return;
+    const id = Number(b.dataset.id);
+    if (b.dataset.act === 'del') { store.deleteTask(id); render(); showToast('Tugas dihapus.'); }
+    else { store.toggleStatus(id); render(); showToast('Status tugas diubah.'); }
+  });
+  btn.addEventListener('click', async () => {
+    btn.disabled = true; btn.textContent = 'Loading...';
+    try {
+      const fetched = await store.fetchMockTasks(3);
+      store.mergeMock(store.load(), fetched);
+      render(); feedback('3 data mock dimuat dari API.', true);
+    } catch (err) { feedback('Error: ' + err.message, false); }
+    finally { btn.disabled = false; btn.textContent = 'Load Mock API'; }
+  });
+  render();
+})();
+</script>
+</body>
+</html>

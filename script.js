@@ -17,7 +17,11 @@
     'simulasi-sql-injection': 'dashboard.html#simulator-sandbox',
     'simulasi-phishing': 'dashboard.html#katalog-serangan',
     'simulasi-brute-force': 'dashboard.html#katalog-serangan',
-    'simulasi-auth-flow': 'dashboard.html#simulator-sandbox'
+    'simulasi-auth-flow': 'dashboard.html#simulator-sandbox',
+    'tugas-dashboard': 'tugas-dashboard.html',
+    'tugas-form': 'tugas-form.html',
+    'tugas-list': 'tugas-list.html',
+    'tugas-typesafe': 'tugas-typesafe.html'
   };
 
   function showToast(message) {

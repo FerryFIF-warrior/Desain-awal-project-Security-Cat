@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List / Tabel — Security Cat (Modul 1-2)</title>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',system-ui,sans-serif;background:#0f131d;color:#dfe2f1}.mono{font-family:'JetBrains Mono',monospace}</style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+<header class="bg-[#0a0e18] border-b border-[#262a35]" role="banner">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-[#00f0ff] text-[#00363a] flex items-center justify-center font-bold">SC</div>
+      <div><h1 class="font-bold">List / Tabel Detail (FR-04/FR-10)</h1>
+      <p class="text-xs text-[#b9cacb]">Filter + hapus + fetch async + loading/error</p></div>
+    </div>
+    <nav aria-label="Navigasi Utama">
+      <ul class="flex gap-4 text-sm font-medium">
+        <li><a href="tugas-dashboard.html" class="text-[#b9cacb] hover:text-white">Dashboard</a></li>
+        <li><a href="tugas-form.html" class="text-[#b9cacb] hover:text-white">Form Input</a></li>
+        <li><a href="tugas-list.html" class="text-[#00f0ff]" aria-current="page">List / Tabel</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full" role="main">
+  <section class="rounded-xl border border-[#262a35] bg-[#1c1f2a] p-6" aria-labelledby="tabel-heading">
+    <div class="flex flex-wrap justify-between items-center gap-3 border-b border-[#262a35] pb-3 mb-4">
+      <h2 id="tabel-heading" class="font-bold">Data Tugas & Simulator Dummy</h2>
+      <div class="flex items-center gap-2 text-sm">
+        <label for="filter-input" class="text-[#b9cacb] text-xs">Filter</label>
+        <input id="filter-input" type="search" placeholder="ketik judul..." class="px-3 py-1.5 rounded-md bg-[#0a0e18] border border-[#3b494b] text-sm w-48">
+        <button id="btn-fetch" class="text-xs bg-[#262a35] hover:bg-[#313540] px-3 py-1.5 rounded-md border border-[#3b494b]">Load Mock API</button>
+        <span id="row-count" class="text-xs text-[#b9cacb]" aria-live="polite">0 baris</span>
+      </div>
+    </div>
+    <div id="table-feedback" class="hidden p-3 mb-4 rounded-lg text-sm" role="status" aria-live="polite"></div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead><tr class="text-left text-xs text-[#b9cacb] border-b border-[#262a35]">
+          <th class="py-2 pr-3">Judul</th><th class="py-2 pr-3">Kategori</th><th class="py-2 pr-3">Prioritas</th><th class="py-2 pr-3">Status</th><th class="py-2 pr-3">Dibuat</th><th class="py-2">Aksi</th>
+        </tr></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <p class="text-xs text-[#b9cacb] mt-4">Sumber gabungan: <span class="mono">localStorage</span> + <span class="mono">jsonplaceholder todos?_limit=5</span> (dipetakan ke struktur SRS). Kolom Simulator/Kuis dummy setara FR-04/FR-10 ada di Modul 5.</p>
+  </section>
+</main>
+<footer class="bg-[#0a0e18] text-[#b9cacb] text-xs py-4 text-center border-t border-[#262a35]" role="contentinfo"><p>&copy; 2026 Security Cat — Modul 1-2.</p></footer>
+<script src="assets/ui.js"></script>
+<script src="assets/tasks-store.js"></script>
+<script>
+(() => {
+  'use strict';
+  const body = document.getElementById('table-body');
+  const filter = document.getElementById('filter-input');
+  const count = document.getElementById('row-count');
+  const fb = document.getElementById('table-feedback');
+  const btn = document.getElementById('btn-fetch');
+  const { badgeClass, escapeHtml, showToast } = window.SecurityCatUI;
+  const store = window.SecurityCatTasks;
+  function feedback(msg, ok) {
+    fb.textContent = msg;
+    fb.className = 'p-3 mb-4 rounded-lg text-sm ' + (ok ? 'bg-emerald-500/10 text-[#6ffbbe] border border-emerald-500/30' : 'bg-red-500/10 text-[#ffb4ab] border border-red-500/30');
+    fb.classList.remove('hidden'); setTimeout(() => fb.classList.add('hidden'), 3000);
+  }
+  function render() {
+    const q = filter.value.trim().toLowerCase();
+    const rows = store.load().filter((t) => !q || t.title.toLowerCase().includes(q));
+    count.textContent = rows.length + ' baris';
+    body.innerHTML = rows.length ? rows.map((t) => `<tr class="border-b border-[#262a35]/60 hover:bg-[#0a0e18]">
+      <td class="py-2 pr-3 font-medium">${escapeHtml(t.title)}</td>
+      <td class="py-2 pr-3 text-[#b9cacb]">${escapeHtml(t.category)}</td>
+      <td class="py-2 pr-3">${badgeClass(t.priority, 'priority')}</td>
+      <td class="py-2 pr-3">${badgeClass(t.status, 'status')}</td>
+      <td class="py-2 pr-3 text-xs text-[#b9cacb]">${escapeHtml(t.createdAt)}</td>
+      <td class="py-2"><button data-id="${t.id}" class="text-xs text-[#ffb4ab] hover:underline" aria-label="Hapus ${escapeHtml(t.title)}">Hapus</button></td>
+    </tr>`).join('') : '<tr><td colspan="6" class="py-8 text-center text-[#b9cacb]">Tidak ada data cocok.</td></tr>';
+  }
+  body.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-id]');
+    if (!b) return;
+    store.deleteTask(Number(b.dataset.id)); render(); showToast('Baris dihapus.');
+  });
+  filter.addEventListener('input', render);
+  btn.addEventListener('click', async () => {
+    btn.disabled = true; btn.textContent = 'Loading...';
+    try {
+      const fetched = await store.fetchMockTasks(5);
+      store.mergeMock(store.load(), fetched);
+      render(); feedback('5 data mock dimuat.', true);
+    } catch (err) { feedback('Error: ' + err.message, false); }
+    finally { btn.disabled = false; btn.textContent = 'Load Mock API'; }
+  });
+  render();
+})();
+</script>
+</body>
+</html>
